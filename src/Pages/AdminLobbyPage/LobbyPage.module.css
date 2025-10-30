@@ -1,3 +1,13 @@
+/* --- Add at the very top --- */
+:root {
+  --font-cinzel: "Cinzel", serif;
+}
+
+/* Make Cinzel the default for the card + contents */
+.cardShell {
+  font-family: var(--font-cinzel);
+}
+
 .pageBg {
   min-height: 100vh;
   display: flex;

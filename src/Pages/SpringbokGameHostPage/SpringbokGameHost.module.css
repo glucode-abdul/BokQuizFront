@@ -1,7 +1,7 @@
 .container {
     min-height: 100vh;
     background: linear-gradient(135deg, #0f5132 0%, #198754 50%, #20c997 100%);
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: "Cinzel", serif;
   }
   
   .card {

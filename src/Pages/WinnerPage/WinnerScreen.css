@@ -1,3 +1,30 @@
+:root {
+  --font-cinzel: "Cinzel", serif;
+}
+
+/* Make Cinzel the default for this screen */
+.winner-container {
+  font-family: var(--font-cinzel);
+}
+
+/* Optional: fine-tune spacing for Cinzel (it’s a display serif) */
+.title-block {
+  letter-spacing: 2px; /* was 4px; Cinzel looks tighter */
+}
+
+.title {
+  font-weight: 800; /* Cinzel supports heavy weights */
+}
+
+.name {
+  font-weight: 700;
+}
+
+/* If you want the button to also use Cinzel explicitly */
+.home-button {
+  font-family: var(--font-cinzel);
+}
+
 .winner-container {
   position: relative;
   width: 100vw;

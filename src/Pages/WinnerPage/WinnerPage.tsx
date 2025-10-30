@@ -79,7 +79,7 @@ export default function WinnerPage() {
           background: "#213A35",
         }}
       >
-        <div style={{ color: "#FFB302", fontSize: "24px" }}>
+        <div style={{ color: "#FFB302", fontSize: "24px", fontFamily: "Cinzel, serif" }}>
           Loading results...
         </div>
       </div>
