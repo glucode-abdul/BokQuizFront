@@ -1,0 +1,19 @@
+.player-lobby {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lobby-message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.lottie-container {
+  width: 150px;
+  height: 150px;
+}
