@@ -1,4 +1,4 @@
-.host-quiz-view {
+/* .host-quiz-view {
     min-height: 100vh;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     padding: 2rem;
@@ -242,4 +242,288 @@
     .btn-next {
       width: 100%;
     }
+  } */
+
+  /* Springboks palette + Cinzel */
+:root {
+  --bok-green: #0b6b3a;
+  --bok-green-700: #084d2a;
+  --bok-green-900: #052d19;
+  --bok-gold: #ffb81c;
+  --bok-gold-700: #d89b14;
+  --bok-cream: #f7f3e7;
+  --glass-white: rgba(255, 255, 255, 0.06);
+  --glass-white-2: rgba(255, 255, 255, 0.1);
+  --shadow-gold: rgba(255, 184, 28, 0.35);
+  --shadow-green: rgba(11, 107, 58, 0.35);
+}
+
+/* Base + font */
+.host-quiz-view,
+.host-quiz-loading {
+  font-family: "Cinzel", serif;
+  color: var(--bok-cream);
+}
+
+.host-quiz-view {
+  min-height: 100vh;
+  background: var(--bok-green-900);
+  padding: 2rem;
+}
+
+.host-quiz-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: 1.5rem;
+}
+
+/* Header */
+.host-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--glass-white);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.host-title h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--bok-gold);
+  text-shadow: 0 0 12px rgba(255, 184, 28, 0.25);
+}
+
+.game-code {
+  font-size: 0.95rem;
+  color: #d6cfbf;
+  margin-top: 0.35rem;
+  display: block;
+  letter-spacing: 0.8px;
+}
+
+/* Timer */
+.timer-display {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.timer-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--bok-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1b1607;
+}
+
+/* Question */
+.question-section {
+  background: var(--glass-white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: #e8e2d0;
+}
+
+.question-number,
+.round-number {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  color: var(--bok-gold);
+}
+
+.question-text h2 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff;
+}
+
+/* Options */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.option-card {
+  background: var(--glass-white);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  /* border: 2px solid transparent; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.option-card:hover {
+  background: var(--glass-white-2);
+  border-color: rgba(255, 184, 28, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px var(--shadow-green);
+}
+
+/* Springbok accent stripes on the left */
+.option-0 { border-left: 5px solid var(--bok-gold); }
+.option-1 { border-left: 5px solid #f0d38b; } /* lighter gold */
+.option-2 { border-left: 5px solid #fff1c7; } /* cream-gold */
+.option-3 { border-left: 5px solid #2c8f5d; } /* mid green */
+
+.option-letter {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(255, 184, 28, 0.22), rgba(255, 184, 28, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--bok-gold);
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 2px rgba(11, 107, 58, 0.2);
+}
+
+.option-text {
+  font-size: 1.5rem;
+  flex: 1;
+  color: #fff;
+}
+
+/* Players */
+.players-section {
+  background: var(--glass-white);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.players-section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: var(--bok-gold);
+  letter-spacing: 0.6px;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.9rem;
+}
+
+.player-card {
+  background: rgba(255, 255, 255, 0.09);
+  padding: 0.9rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.player-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.player-status {
+  font-size: 0.85rem;
+  color: #e8e2d0;
+  opacity: 0.95;
+}
+
+/* Controls */
+.host-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-next {
+  background: var(--bok-gold);
+  color: #1b1607;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px var(--shadow-gold);
+  filter: saturate(1.05);
+}
+
+.btn-next:active {
+  transform: translateY(0);
+}
+
+/* Accessibility focus */
+.btn-next:focus,
+.option-card:focus {
+  outline: 3px solid var(--bok-gold);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .host-quiz-view { padding: 1rem; }
+
+  .host-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
+
+  .question-text h2 { font-size: 1.45rem; }
+
+  .options-grid { grid-template-columns: 1fr; }
+
+  .players-grid { grid-template-columns: 1fr; }
+
+  .btn-next { width: 100%; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .option-card,
+  .btn-next { transition: none; }
+}
